@@ -1,0 +1,15 @@
+from anime2021.uekaramitaki import RollingPolygon1,RollingPolygon2
+import IPython
+
+studio = AStudio()
+shape1 = RollingPolygon1(width=300, N=5, color='green')
+shape2 = RollingPolygon2(width=225, N=5, cx=150, cy=150, color='darkgreen')
+shape3 = RollingPolygon1(width=150, N=5, cx=150, cy=150, color='green')
+shape4 = RollingPolygon2(width=75, N=5, cx=150, cy=150, color='darkgreen')
+studio.append(shape1)
+studio.append(shape2)
+studio.append(shape3)
+studio.append(shape4)
+for i in range(60):
+    studio.render()
+IPython.display.Image(studio.create_anime())
